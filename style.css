@@ -1,20 +1,30 @@
 h1{color: rgb(212, 24, 24);
 background-color: black;
-width: 500px;
+width: 250px;
 }
 h2{color: red;
 background-color: black;
-width: 500px;
+width: 355px;
 }
 body{background-color: darkgrey;
 
 }
+
+
+
 .box{background-color:blue;
     color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: white 0px 0px 10px;
-width: 100px;
-height: 100px;
+width: 200px;
+height: 200px;
+padding: 25px;
 
 }
+
+
+
+.box a{color: whitesmoke;}
+
+
 
