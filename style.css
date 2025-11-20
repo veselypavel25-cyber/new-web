@@ -1,7 +1,7 @@
 h1 {
     color: rgb(212, 24, 24);
     background-color: black;
-    width: 250px;
+    width: 1100px;
 }
 
 h2 {
@@ -36,7 +36,7 @@ body {
 
 .ferrari{
     border-radius: 25px;
-    padding: 20px;
+    padding: 5px;
 
     width: 320px;
     height: 400px;
@@ -45,7 +45,7 @@ body {
 
 .schumacher{
     border-radius: 25px;
-    padding: 20px;
+    padding: 5px;
 
     width: 320px;
     height: 370px;
