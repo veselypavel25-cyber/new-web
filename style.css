@@ -8,6 +8,7 @@ width: 355px;
 }
 body{background-color: darkgrey;
 
+
 }
 
 
@@ -21,10 +22,48 @@ height: 200px;
 padding: 25px;
 
 }
+.ferrari.jpg{border-radius: 25px;
+padding: 20px;
+display:flex ;
+flex-wrap: wrap;
+margin: 10px;
+justify-content: start;
+align-items: start;
+gap: 10px;
+}
+.schumacher.jpg{border-radius: 25px;
+padding: 20px;
+display:flex ;
+flex-wrap: wrap;
+margin: 10px;
+justify-content: start;
+align-items: start;
+gap: 10px;
+width: 100px;
+height: 100px;
+}
 
+
+
+
+.box{display:flex ;
+flex-wrap: wrap;
+margin: 10px;
+justify-content: start;
+align-items: start;
+gap: 10px;
+
+}
 
 
 .box a{color: whitesmoke;}
 
+
+.header{
+display: flex;
+
+
+
+}
 
 
