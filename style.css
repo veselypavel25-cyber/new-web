@@ -34,29 +34,43 @@ body {
     align-items: start;
 }
 
+.box:hover {
+    background-color: cornflowerblue;
+    animation-delay: 400ms;
+    cursor: pointer;
+}
+
+
+
+
+
+
 .textbox {
     width: 250px;
     height: 150px;
     background-color: red;
-    color:white;
-border-radius: 5px;
+    color: white;
+    border-radius: 5px;
     padding: 3px;
     margin: 10px;
     box-shadow: white 0px 0px 5px;
-   text-align: center;
+    text-align: center;
 
 }
 
+.textbox:hover {
+    background-color: tomato;
+    animation-delay: 400ms;
+    cursor: pointer;
+}
 
 
 
 
 .box a {
     color: whitesmoke;
+
 }
-
-
-
 
 
 
@@ -77,19 +91,19 @@ border-radius: 5px;
     background-color: rgb(122, 137, 151);
     width: 100%;
     border-radius: 15px;
-border: red 5px solid;
+    border: red 5px solid;
 }
 
 
 
 
 .card img {
-    width:100%;
+    width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: top;
     border-radius: 15px;
-    
+
 
 
 
@@ -99,18 +113,17 @@ border: red 5px solid;
     width: 250px;
     height: 15px;
     background-color: red;
-    color:white;
-border-radius: 5px;
+    color: white;
+    border-radius: 5px;
     padding: 3px;
     margin: 10px;
     box-shadow: white 0px 0px 5px;
     align-items: center;
-    
+
 }
 
 
 
-
-.card p{
-margin: 5px;
+.card p {
+    margin: 5px;
 }
