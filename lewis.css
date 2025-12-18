@@ -7,6 +7,8 @@ background-color: black;
 
 
 
+
+
 .card_holder1 {
     display: flex;
     gap: 10px;
@@ -33,9 +35,19 @@ background-color: black;
 }
 
 
+   
+.clone {
+width: 140px;
+color: rgb(212, 24, 24);
+
+}
+
+.sand{
+width: px;
+color: rgb(212, 24, 24);
 
 
-
+}
 
 
 
