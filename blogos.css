@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+
+
+}
+
+h1 {
+    color: rgb(212, 24, 24);
+    background-color: black;
+    text-align: center;
+}
+
+.logosbyyear {
+    width: 120px;
+    height: 55px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+}
+
+.backto {
+    width: 120px;
+    height: 55px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+
+}
+
+.backto:hover {
+    background-color: tomato;
+    animation-delay: 400ms;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    gap: 680px;
+
+}

@@ -1,7 +1,8 @@
 h1 {
     color: rgb(212, 24, 24);
     background-color: black;
-    width: 1100px;
+
+    text-align: center;
 }
 
 h2 {
@@ -43,49 +44,16 @@ body {
 
 
 
-
-
-.textbox {
-    width: 250px;
-    height: 150px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
-}
-
-.textbox:hover {
-    background-color: tomato;
-    animation-delay: 400ms;
-    cursor: pointer;
-}
-
-
-
-
 .box a {
     color: whitesmoke;
 
 }
 
-
-
 .card_holder {
     display: flex;
     gap: 10px;
     padding: 10px;
-
-
-
 }
-
-
-
-
 
 .card {
     background-color: rgb(122, 137, 151);
@@ -94,18 +62,12 @@ body {
     border: red 5px solid;
 }
 
-
-
-
 .card img {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: top;
     border-radius: 15px;
-
-
-
 
 }
 
@@ -122,8 +84,32 @@ body {
 
 }
 
-
-
 .card p {
     margin: 5px;
+}
+
+.morelinks {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.nolinks {
+    width: 250px;
+    height: 150px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+
+}
+
+.nolinks:hover {
+    background-color: tomato;
+    animation-delay: 400ms;
+    cursor: pointer;
 }

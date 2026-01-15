@@ -7,8 +7,14 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    gap: 700px;
 }
 
+h1 {
+    color: rgb(212, 24, 24);
+    background-color: black;
+    text-align: center;
+}
 
 
 
@@ -63,7 +69,11 @@ header {
 
 }
 
-
+.backto:hover {
+    background-color: tomato;
+    animation-delay: 400ms;
+    cursor: pointer;
+}
 
 .sand {
     width: 120px;
@@ -78,8 +88,8 @@ header {
 
 }
 
-.learn{
-width: max-content;
+.learn {
+    width: max-content;
     background-color: red;
     color: white;
     border-radius: 5px;
@@ -96,13 +106,13 @@ header {
     gap: 200px;
 }
 
-.hidden{
-display: none;
+.hidden {
+    display: none;
 
 }
 
-.learn:hover{
-background-color: cornflowerblue;
+.learn:hover {
+    background-color: cornflowerblue;
     animation-delay: 400ms;
     cursor: pointer;
 }
