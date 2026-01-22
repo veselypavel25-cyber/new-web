@@ -48,8 +48,9 @@ header {
 
 }
 
-.rokformule{
-width: 80%;
-height: 80%;
-
+.rokformule img{
+width: 85%;
+height: 90%;
+margin-inline: auto;
+display: block;
 }

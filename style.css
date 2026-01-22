@@ -18,6 +18,42 @@ body {
 }
 
 
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: overlay-animace 1.5s normal;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.overlay img {
+
+    width: 475px;
+}
+
+@keyframes overlay-animace {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
 
 .box {
     background-color: blue;
@@ -109,6 +145,32 @@ body {
 }
 
 .nolinks:hover {
+    background-color: tomato;
+    animation-delay: 400ms;
+    cursor: pointer;
+}
+
+.threeboxes {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.three {
+    width: 250px;
+    height: 150px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+
+}
+
+.three:hover {
     background-color: tomato;
     animation-delay: 400ms;
     cursor: pointer;
