@@ -85,6 +85,19 @@ body {
 
 }
 
+.formule img {
+    width: 566px;
+    height: 380px;
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.auto{
+display: flex;
+gap: 225px;
+justify-content:start ;
+}
+
 .card_holder {
     display: flex;
     gap: 10px;

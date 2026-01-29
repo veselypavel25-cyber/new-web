@@ -44,15 +44,29 @@ header {
 .enzo img {
     margin-inline: auto;
     display: block;
-    width: 90%;
+    width: 100%;
     border: red;
 border-radius: 25px;
 }
 
 .info{
 margin: 10px;
-width: 200px;
+width: 1000px;
 height: 166px;
 color: red;
 }
 
+.labelholder{
+position: relative;
+width:90% ;
+margin: 0 auto;
+}
+
+.labelholder .label{
+position: absolute;
+background-color: red;
+    color: white;
+border-radius: 15px;
+padding: 20px;
+
+}
