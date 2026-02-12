@@ -1,0 +1,67 @@
+h1 {
+    color: rgb(212, 24, 24);
+    background-color: black;
+
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.backto {
+    width: 120px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+
+}
+
+.someof {
+    width: 120px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    box-shadow: white 0px 0px 5px;
+    text-align: center;
+
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    gap: 670px;
+}
+
+h2 {
+    color: white;
+    background-color: red;
+    width: max-content;
+    height: max-content;
+    opacity: 92%;
+}
+
+.modelfirst {
+    opacity: 92%;
+background-image: url("img/firstferraricar.jpg");
+width: 100%;
+aspect-ratio: 1.5;
+background-size: cover;
+color: white;
+padding-top: 40px;
+}
+
+.modelfirst p{
+background-color: rgba(0, 0, 0, 0.5);
+
+
+
+}
