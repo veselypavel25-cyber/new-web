@@ -1,72 +1,65 @@
-h1 {
-    color: rgb(212, 24, 24);
-    background-color: black;
-
-    text-align: center;
+:root {
+    --ferrari-red: #C40000;
+    --panel: #0e0e10;
+    --text: #fff7ee;
+    --muted: #b9c2c8;
 }
 
-body {
-    background-color: black;
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg,#030303,#0b0b0b);
+    color:var(--text);
 }
 
-.backto {
-    width: 120px;
-    height: 45px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
+h1{
+    color:var(--ferrari-red);
+    text-align:center;
+    margin:0;
+    padding:18px 0;
 }
 
-.someof {
-    width: 120px;
-    height: 45px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
+header{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding:12px 20px;
 }
 
-header {
-    display: flex;
-    justify-content: start;
-    gap: 670px;
+.backto{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--ferrari-red);
+    color:#fff;
+    border-radius:8px;
+    padding:8px 12px;
+    margin:8px;
+    text-decoration:none;
 }
 
-.enzo img {
-    margin-inline: auto;
-    display: block;
-    width: 100%;
-    border: red;
-border-radius: 25px;
+.container{
+    max-width:1100px;
+    margin:22px auto;
+    padding:0 20px;
 }
 
-.info{
-margin: 10px;
-width: 1000px;
-height: 166px;
-color: red;
+.enzo img{display:block; width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+
+.labelholder{position:relative; width:90%; margin: 0 auto;}
+.labelholder .label{position:absolute; left:20px; top:20px; background:var(--ferrari-red); color:#fff; padding:14px 18px; border-radius:12px; font-weight:700}
+
+.info{margin:18px auto; max-width:1000px; color:var(--muted); line-height:1.6; background:rgba(255,255,255,0.02); padding:16px; border-radius:10px}
+
+@media (max-width:800px){
+    .labelholder{width:100%}
+    .labelholder .label{position:static; display:inline-block; margin:12px}
+    .container{padding:0 12px}
+    .info{margin:12px; padding:12px}
 }
 
-.labelholder{
-position: relative;
-width:90% ;
-margin: 0 auto;
-}
-
-.labelholder .label{
-position: absolute;
-background-color: red;
-    color: white;
-border-radius: 15px;
-padding: 20px;
-
+@media (min-width:1200px){
+    .container{max-width:1300px}
 }

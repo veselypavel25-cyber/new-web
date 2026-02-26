@@ -16,175 +16,154 @@ body {
 
 
 }
-
-
-.overlay {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: overlay-animace 1.5s normal;
-    opacity: 0;
-    pointer-events: none;
-    top: 0;
-    left: 0;
+:root{
+    --bg-dark: #06060a;
+    --panel: #151820;
+    --accent: #c40000; /* Ferrari red */
+    --muted: #9aa6b2;
+    --text: #fff7ee;
 }
 
-.overlay img {
+*{box-sizing:border-box}
 
-    width: 475px;
+html, body{height:100%;}
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg,var(--bg-dark), #0b0b0f 60%);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    padding: 18px;
 }
 
-@keyframes overlay-animace {
-    0% {
-        opacity: 1;
+h1{ 
+    text-align:center;
+    margin: 8px 0 4px;
+    color:var(--accent);
+    font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+}
+
+/* center any legacy <center> tags inside headings */
+h1 center, h2 center{display:block}
+
+h2{
+    text-align:center;
+    color:var(--muted);
+    margin: 6px 0 18px;
+    font-weight:500;
+}
+
+/* overlay (logo intro) */
+.overlay{
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.95);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    animation: overlay-animace 1.6s forwards;
+    pointer-events:none;
+}
+.overlay img{max-width:60vw; width:420px; height:auto; border-radius:8px}
+
+@keyframes overlay-animace{from{opacity:1} to{opacity:0}}
+
+/* Top row with store box and hero image */
+.auto{display:flex; gap:20px; align-items:flex-start; justify-content:center; flex-wrap:wrap}
+
+.box{
+    background:linear-gradient(180deg, var(--panel), #1d2228);
+    color:var(--text);
+    border-radius:18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    width: 180px;
+    min-height:140px;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    align-items:center;
+    justify-content:center;
+}
+.box a{color:var(--text); text-decoration:underline}
+.box:hover{transform:translateY(-4px); box-shadow:0 16px 40px rgba(196,0,0,0.12);}
+
+.formule img{width:100%; max-width:600px; height:auto; border-radius:18px; box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+
+/* card grid for drivers */
+.card_holder{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin:18px 0}
+.card{background:linear-gradient(180deg,#28323a,#1b2227); border-radius:12px; overflow:hidden; border:3px solid rgba(196,0,0,0.12);}
+.card img{width:100%; height:220px; object-fit:cover; display:block}
+
+/* make sure driver faces are centered in the crop */
+.card img.lewis,
+.card img.leclerc {
+    /* nudge the crop slightly down so faces are visible */
+    object-position: center 20%;
+}
+.card p{margin:10px; color:var(--muted)}
+
+.text{display:inline-block; background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; margin:6px 0}
+
+.morelinks, .threeboxes{display:flex; gap:14px; flex-wrap:wrap; margin:16px 0}
+
+.nolinks, .three{flex:1 1 220px; min-width:200px; background:linear-gradient(180deg,var(--panel),#22272b); color:var(--text); padding:14px; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.55); text-align:center}
+.nolinks a, .three a{color:var(--accent); font-weight:600; text-decoration:none}
+.nolinks:hover, .three:hover{transform:translateY(-6px)}
+
+/* layout helpers */
+.auto, .morelinks, .threeboxes{align-items:stretch}
+
+/* small screens */
+@media (max-width:720px){
+    body{padding:12px}
+    .box{width:140px; padding:12px}
+    .formule img{max-width:100%; height:auto}
+    .card img{height:180px}
+    .overlay img{width:60vw}
+}
+
+/* very small phones */
+@media (max-width:420px){
+    h1{font-size:1.4rem}
+    .box{width:100%; min-height:100px}
+    .morelinks, .threeboxes{flex-direction:column}
+}
+
+@media (min-width:1200px) {
+    .formule img { width: 566px; height: 380px; }
+    .auto { gap: 40px; justify-content: flex-start; }
+}
+
+/* Desktop fullscreen hero adjustments */
+@media (min-width:1100px) {
+    /* make the top area a two-column layout where the image can fill viewport height */
+    .auto { align-items: center; justify-content: space-between; }
+
+    .box { flex: 0 0 220px; width: 220px; }
+
+    .formule { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; }
+    .formule img {
+        width: auto;
+        max-width: 80vw;
+        height: min(75vh, 820px);
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 18px 60px rgba(0,0,0,0.7);
     }
 
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
+    /* Give the page more breathing room on large screens */
+    body { padding: 28px 60px; }
 }
 
+/* Ensure overlay does not block interactions after animation ends */
+.overlay[aria-hidden="true"]{ display:none; }
 
-
-.box {
-    background-color: blue;
-    color: white;
-    border-radius: 25px;
-    box-shadow: white 0px 0px 10px;
-    width: 140px;
-    height: 140px;
-    padding: 25px;
-    background: flex;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px;
-
-    align-items: start;
-}
-
-.box:hover {
-    background-color: cornflowerblue;
-    animation-delay: 400ms;
-    cursor: pointer;
-}
-
-
-
-
-.box a {
-    color: whitesmoke;
-
-}
-
-.formule img {
-    width: 566px;
-    height: 380px;
-    border-radius: 25px;
-    margin: 5px;
-}
-
-.auto{
-display: flex;
-gap: 225px;
-justify-content:start ;
-}
-
-.card_holder {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-}
-
-.card {
-    background-color: rgb(122, 137, 151);
-    width: 100%;
-    border-radius: 15px;
-    border: red 5px solid;
-}
-
-.card img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 15px;
-
-}
-
-.text {
-    width: 250px;
-    height: 15px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    align-items: center;
-
-}
-
-.card p {
-    margin: 5px;
-}
-
-.morelinks {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-
-}
-
-.nolinks {
-    width: 250px;
-    height: 150px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
-}
-
-.nolinks:hover {
-    background-color: tomato;
-    animation-delay: 400ms;
-    cursor: pointer;
-}
-
-.threeboxes {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-
-}
-
-.three {
-    width: 250px;
-    height: 150px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
-}
-
-.three:hover {
-    background-color: tomato;
-    animation-delay: 400ms;
-    cursor: pointer;
+/* Extra small tweaks for very narrow screens */
+@media (max-width:360px) {
+    .card img { height: 140px; }
+    .formule img { height: auto; max-width: 100%; }
+    body { padding: 10px; }
 }
