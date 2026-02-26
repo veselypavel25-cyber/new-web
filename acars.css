@@ -1,56 +1,33 @@
-body {
-    background-color: black;
-
-
+:root{
+    --ferrari-red: #C40000;
+    --panel: #0f1113;
+    --text: #fff7ee;
+    --muted: #99a6ad;
 }
 
-h1 {
-    color: rgb(212, 24, 24);
-    background-color: black;
-    text-align: center;
+*{box-sizing:border-box}
+
+body{margin:0;font-family:'Segoe UI', Roboto, Arial, sans-serif;background:linear-gradient(180deg,#030303,#0b0b0b);color:var(--text)}
+
+h1{color:var(--ferrari-red);text-align:center;padding:18px 0;margin:0;font-size:clamp(1.4rem,2.2vw,2.4rem)}
+
+header{display:flex;justify-content:flex-start;padding:12px 20px}
+.backto{display:inline-flex;align-items:center;background:var(--ferrari-red);color:#fff;border-radius:8px;padding:8px 12px;margin:6px}
+.backto a{color:#fff;text-decoration:none}
+
+.container{max-width:1100px;margin:22px auto;padding:0 20px}
+
+.carsbyyear{background:linear-gradient(90deg, rgba(196,0,0,0.95), rgba(255,130,130,0.85));padding:12px 16px;border-radius:10px;color:#fff;margin-bottom:18px;text-align:center;font-weight:600}
+
+.rokformule{display:flex;justify-content:center}
+.rokformule img{width:100%;max-width:1100px;height:auto;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+
+@media (max-width:900px){
+    .container{padding:0 12px}
+    .rokformule img{max-width:95%}
 }
 
-.backto {
-    width: 120px;
-    height: 55px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-
-}
-
-.backto:hover {
-    background-color: tomato;
-    animation-delay: 400ms;
-    cursor: pointer;
-}
-
-.carsbyyear {
-    width: 120px;
-    height: 55px;
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
-    box-shadow: white 0px 0px 5px;
-    text-align: center;
-}
-
-header {
-    display: flex;
-    justify-content: start;
-    gap: 670px;
-
-}
-
-.rokformule img{
-width: 85%;
-height: 90%;
-margin-inline: auto;
-display: block;
+@media (max-width:420px){
+    .backto{padding:6px 10px}
+    h1{font-size:1.4rem}
 }
