@@ -106,21 +106,21 @@ header {
     object-position: center 20%
 }
 
-/* ensure Alberto Ascari's portrait is centered in the crop */
-.card1 img.Ascari,
-.card1 img.Alberto {
-    object-position: center 22%;
+/* ensure Alberto Ascari's portrait is centered in the crop (use lowercase class names) */
+.card1 img.ascari,
+.card1 img.alberto {
+    object-position: center 22%
 }
 
 /* larger hero-like treatment for Ascari when space allows */
-.ascari-hero {
-    transition: transform .18s ease;
+.ascari {
+    transition: transform .18s ease
 }
 
 @media (min-width:1100px) {
 
-    .card1 img.Ascari.ascari-hero,
-    .card1 img.Alberto.ascari-hero {
+    .card1 img.ascari,
+    .card1 img.alberto {
         height: 520px;
         max-width: 80vw;
         object-position: center 24%;
