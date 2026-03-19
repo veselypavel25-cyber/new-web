@@ -26,6 +26,32 @@ body {
     --text: #fff7ee;
 }
 
+
+.backto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ferrari-red);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 6px;
+    box-shadow: 0 8px 18px rgba(196, 0, 0, 0.18);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.backto a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.backto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(196, 0, 0, 0.28);
+}
+
+
 * {
     box-sizing: border-box
 }
