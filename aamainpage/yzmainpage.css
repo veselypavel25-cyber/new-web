@@ -72,5 +72,37 @@ header {
     }
 }
 
+.redbull {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 20px;
+}
 
+.gotoredbull {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ferrari-red);
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 8px;
+    text-decoration: none;
+}
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid var(--muted);
+}
+
+th {
+    background: var(--panel);
+    text-align: left;
+}
