@@ -79,17 +79,7 @@ header {
     padding: 12px 20px;
 }
 
-.gotoredbull {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--ferrari-red);
-    color: #fff;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin: 8px;
-    text-decoration: none;
-}
+
 
 table {
     width: 100%;
@@ -105,4 +95,44 @@ th, td {
 th {
     background: var(--panel);
     text-align: left;
+}
+
+.morelinks {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 16px 0
+}
+
+.nolinks {
+    flex: 1 1 220px;
+    min-width: 200px;
+    background: linear-gradient(180deg, var(--panel), #22272b);
+    color: var(--text);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+    text-align: center
+}
+
+.nolinks a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none
+}
+
+.nolinks:hover {
+    transform: translateY(-6px)
+}
+
+
+.auto,
+.morelinks {
+    align-items: stretch
+}
+.F1car img {
+width: 100%;
+
+
+
 }
