@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="yzmainpage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Ferrari</title>
+    <title>Formula 1</title>
 </head>
 
 <body>
@@ -70,3 +70,127 @@
 
 <script src="/tabulka.js"></script>
 
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>F1 Live Standings</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 60px 50px 1fr 160px 80px;
+    align-items: center;
+    background: #121212;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .row:hover {
+    background: #1c1c1c;
+  }
+
+  .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+  }
+
+  .pos {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .driver-img {
+    width: 36px;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-weight: 500;
+  }
+
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+
+  .team img {
+    width: 22px;
+  }
+
+  .points {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  /* 🔼🔽 změna pořadí */
+  .arrow {
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  .up { color: #00ff9c; }
+  .down { color: #ff4d4d; }
+
+  /* animace */
+  .moveUp {
+    animation: up 0.5s ease;
+  }
+
+  .moveDown {
+    animation: down 0.5s ease;
+  }
+
+  @keyframes up {
+    from { transform: translateY(10px); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes down {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(0); }
+  }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>F1 DRIVER STANDINGS</h1>
+  <div id="table" class="table"></div>
+</div>
+</body>
+</html>
