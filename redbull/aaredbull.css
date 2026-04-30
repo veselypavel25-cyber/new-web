@@ -1,17 +1,21 @@
-
-
 :root {
     --bg-dark: #06060a;
     --panel: #151820;
-    --accent: #c40000; /* Ferrari red */
+    --accent: #c40000;
+    /* Ferrari red */
     --ferrari-red: #c40000;
     --muted: #9aa6b2;
     --text: #fff7ee;
 }
 
-* { box-sizing: border-box }
+* {
+    box-sizing: border-box
+}
 
-html, body { height: 100% }
+html,
+body {
+    height: 100%
+}
 
 body {
     margin: 0;
@@ -22,16 +26,13 @@ body {
     padding: 18px;
 }
 
+/* page headings */
 h1 {
     text-align: center;
-    margin: 8px 0 4px;
+    margin: 8px 0 6px;
     color: var(--accent);
     font-size: clamp(1.4rem, 2.2vw, 2.2rem);
 }
-
-/* center any legacy <center> tags inside headings */
-h1 center,
-h2 center { display: block }
 
 h2 {
     text-align: center;
@@ -54,17 +55,28 @@ h2 {
     transition: transform .12s ease, box-shadow .12s ease;
 }
 
-.backto a { color: #fff; text-decoration: none; font-weight: 600 }
+.backto a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600
+}
 
-.backto:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(196,0,0,0.28) }
+.backto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(196, 0, 0, 0.28)
+}
 
 /* small screen tweaks */
 @media (max-width:720px) {
-    body { padding: 12px }
+    body {
+        padding: 12px
+    }
 }
 
 @media (max-width:420px) {
-    h1 { font-size: 1.4rem }
+    h1 {
+        font-size: 1.4rem
+    }
 }
 
 .box {
